@@ -1,0 +1,549 @@
+<HTML>
+<HEAD>
+<TITLE>Fisiere text in C++</TITLE>
+<link rel="icon" href="https://AlexPG.dedsec.dev/FgFdAj.gif">
+</HEAD>
+<BODY BGCOLOR="#8ba7c3">
+
+<H1><B><U><a style="margin-left: 750px; color: #fff;">Fisiere text in C++</a></U> <a></a></B></H1>
+<link rel="stylesheet" href="proiect.html">
+
+<!-- Auto width -->
+
+<a href="#" download style="margin-left: 1500px; color: gray;">Download File</a>
+
+
+<!-- Full width -->
+<FONT SIZE="5" color="#ffffff">
+<BR>
+<P><B>Un fisier este o colectie de date indicat printrun nume si o extensie. Numele este despartit
+de extensie prin punct.
+<BR>
+Exista doua tipuri de fisiere: fisiere text si
+fisiere binare.</B></P>
+<BR>
+<ul>
+<U><li>Un fisier text contine text (cifre si caractere)</li>
+<BR>
+  <li>Un fisier binar poate contine si imagini, baze
+de date, etc.</U></li>
+</ul>
+<BR>
+</FONT>
+<BR>
+<BR>
+<FONT SIZE="5" COLOR="#66ffff">
+<U><B>Lucrul cu fisiere text in C++</B></U>
+<BR>
+<BR>
+Se adauga o biblioteca standard si anume <B>"<"fstream">"</B>.
+<BR>
+<BR>
+Aceasta biblioteca lucreaza cu fluxuri (stream-uri) :
+<BR>
+<BR>
+<ul>
+<li>ifstream - flux de intrare</li>
+<li>ofstream - flux de iesire</li>
+<li>fstream - are ambele caracteristici (ifstream si ofstream)</li>
+</ul>
+</FONT>
+<BR>
+<BR>
+<FONT SIZE="5" COLOR="#ff9900">
+<B><U>Opreatiile care se efectueaza, in general, cu fisiere text sunt:</U></B>
+<BR>
+<BR>
+<ul>
+<li>deschidrea unui fisier text.</li>
+<li>inchiderea unui fisier text.</li>
+<li>citirea datelor dintr-un fisier text.</li>
+<li>scrierea datelor intr-un fisier text.</li>
+<li>adaugarea datelor intr-un fisier text.</li>
+</ul>
+</FONT>
+<FONT SIZE="5" COLOR="#33ff77">
+<BR>
+<BR>
+<B><U>Deschiderea unui fisier text</U></B>
+<BR>
+<BR>
+Pentru a putea efectua operatii cu un fisier text acesta
+trebuie mai intai deschis.Astfel se pot folosi unul din
+obiectele ifstream(pentru citire) sau ofstrem(pentru
+scriere) din/in fisier.
+<BR>
+<BR>
+<li>ifstream f("fisier.in"); //s-a deschis fisierul pentru citire.</li>
+<li>ofstream f("fisier.out"); //s-a deschis fisierul pentru scriere.</li>
+<BR>
+</FONT>
+<FONT SIZE="5" COLOR=" #ffff00">
+<BR>
+<B><U>Aplicatii cu fisiere text in C++</U></B>
+<BR>
+<BR>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+   body {font-family: Arial, Helvetica, sans-serif;}
+   
+   /* The Modal (background) */
+   .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     padding-top: 100px; /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   }
+   
+   /* Modal Content */
+   .modal-content {
+     background-color: #fefefe;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 80%;
+   }
+   
+   /* The Close Button */
+   .close {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+   }
+
+   .close2 {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close2:hover,
+   .close2:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+   }
+
+   .close3 {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close3:hover,
+   .close3:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+   }
+
+   .close4 {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close4:hover,
+   .close4:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+   }
+
+   .close5 {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close5:hover,
+   .close5:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+   }
+
+   </style>
+      </head>
+  </meta>
+   <body>
+  
+   
+   <!-- Trigger/Open The Modal -->
+   <a style="color: #ff0; font-size: 25;"><u><i>Aplicatia I</u></a>
+   <BR>
+    &nbsp; &nbsp;&nbsp;<button id="myBtn" type="button">Click</button>
+   <BR>
+    <BR>
+   <a style="color: #ff0; font-size: 25;"><u><i>Aplicatia II</u></a>
+    <BR>
+      &nbsp; &nbsp;&nbsp;<button id="myBtn2" type="button">Click</button>
+   <BR>
+   <BR>
+   <a style="color: #ff0; font-size: 25;"><u><i>Aplicatia III</u></a>
+    <BR>
+      &nbsp; &nbsp;&nbsp;<button id="myBtn3" type="button">Click</button>
+   <BR>
+    <BR>
+   <a style="color: #ff0; font-size: 25;"><u><i>Aplicatia IV</u></a>
+    <BR>
+      &nbsp; &nbsp;&nbsp;<button id="myBtn4" type="button">Click</button>
+   <BR>
+    <BR>
+   <a style="color: #ff0; font-size: 25;"><u><i>Aplicatia V</u></a>
+    <BR>
+      &nbsp; &nbsp;&nbsp;<button id="myBtn5" type="button">Click</button>
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+   
+     <!-- Modal content -->
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <p>
+          <a style="margin-left: 680px; color: #ff0"><u>Aplicatia I</u></a>
+        <BR>
+        <BR> 
+        #include < fstream >
+         <BR>
+         using namespace std;
+         <BR>
+         int main ()
+         <BR>
+         {int a, b, c, max;
+         <BR>
+         ifstream f("fisier.in");
+         <BR>
+         ofstream g("fisier.out");
+         <BR>
+         f<< a << b << c;
+         <BR>
+         max=0;
+         <BR>
+         if((a>b)&&(a>c))
+         <BR>
+         max=a;
+         <BR>
+         if((b>c)&&(b>a))
+         <BR>
+         max=b;
+         <BR>
+         if((c>a)&&(c>b))
+         <BR>
+         max=c;
+         <BR>
+         g<<"max="<< max;
+         <BR>
+         f.close();
+         <BR>
+         g.close();
+         <BR>
+         return 0;
+         }</p>
+     </div>
+   
+   </div>
+
+   <div id="myModal2" class="modal">
+   
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close2">&times;</span>
+      <p>          <a style="margin-left: 680px; color: #ff0"><u>Aplicatia II</u></a>
+        <BR>
+        <BR>
+        #include < fstream >
+        <BR>
+        using namespace std;
+        <BR>
+        int main ()
+        <BR>
+        {int n, c, cmax=0;
+        <BR>
+        ifstream f("fisier.in")
+        <BR>
+        ofstream g("fisier.out")
+        <BR>
+        f<< n;
+        <BR>
+        while (n>0)
+        <BR>
+        {c=n%10;
+        <BR>
+        if((c%2==0)&&(c>cmax))
+        <BR>
+           cmax=c;
+           <BR>
+           n=n/10;
+        }
+        g<<"Cifra cea mai mare este"<< cmax;
+        <BR>
+        f.close();
+        <BR>
+        g.close();
+        <BR>
+        return 0;
+        }
+        <BR>
+        <BR></p>
+    </div>
+  
+  </div>
+
+  <div id="myModal3" class="modal">
+   
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close3">&times;</span>
+      <p>
+        <a style="margin-left: 680px; color: #ff0"><u>Aplicatia III</u></a>
+        <BR>
+        <BR>
+        #include < fstream >
+        <BR>
+        using namespace std;
+        <BR>
+        int main ()
+        <BR>
+        {int n, c, cmin=9;
+        <BR>
+        ifstream f("fisier.in");
+        <BR>
+        ofstream g("fisier.out");
+        <BR>
+        f<< n;
+        <BR>
+        while (n>0)
+        <BR>
+        {n=n%10;
+        <BR>
+        if((c%2!=0)&&(c< cmin))
+        <BR>
+        cmin>c;
+        <BR>
+        n=n/10;
+        <BR>
+        
+        }
+        g<<"Cifra minima este"<< cmin;
+        <BR>
+        f.close();
+        <BR>
+        g.close();
+        <BR>
+        return 0;
+        }</p>
+    </div>
+  
+  </div>
+
+  <div id="myModal4" class="modal">
+   
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close4">&times;</span>
+      <p>
+        <a style="margin-left: 680px; color: #ff0"><u>Aplicatia IV</u></a>
+        <BR>
+          <BR>
+          #include < fstream >
+          <BR>
+          using namespace std;
+          <BR>
+          int main ()
+          <BR>
+          {int n, c, s=0;
+          <BR>
+          ifstream f("fisier.in")
+          <BR>
+          ofstream g("fisier.out")
+          <BR>
+          f<< n;
+          <BR>
+          while (n>0)
+          <BR>
+          {c=n%10;
+          <BR>
+          if(c%3==0)
+          <BR>
+          s=s+c;
+          <BR>
+          n=n/10;
+          }
+          <BR>
+          g<<"Suma cifrelor divizibile cu trei este "<< s;
+          <BR>
+          f.close();
+          <BR>
+          g.close();
+          <BR>
+          return 0;}
+          <BR>
+          <BR></p>
+    </div>
+  
+  </div>
+
+  <div id="myModal5" class="modal">
+   
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close5">&times;</span>
+      <p>
+        <a style="margin-left: 680px; color: #ff0"><u>Aplicatia V</u></a>
+        <BR>
+          <BR>
+          #include < fstream >
+          <BR>
+          using namespace std;
+          <BR>
+          int main ()
+          <BR>
+          {int n, c, p=1;
+          <BR>
+          ifstream f("fisier.in")
+          <BR>
+          ofstream g("fisier.out")
+          <BR>
+          f<< n;
+          <BR>
+          while (n>0)
+          <BR>
+          {c=n%10;
+          <BR>
+          if(c%2!=0)
+          <BR>
+          p=p*c;
+          <BR>
+          n=n/10;
+          }
+          <BR>
+          g<<"Produsul cifrelor impare este  "<< p;
+          <BR>
+          f.close();
+          <BR>
+          g.close();
+          <BR>
+          return 0;}</p>
+    </div>
+  
+  </div>
+   
+   <script>
+   // Get the modal
+   var modal = document.getElementById("myModal");
+   var modal2 = document.getElementById("myModal2");
+   var modal3 = document.getElementById("myModal3");
+   var modal4 = document.getElementById("myModal4");
+   var modal5 = document.getElementById("myModal5");
+   
+   // Get the button that opens the modal
+   var btn = document.getElementById("myBtn");
+   var btn2 = document.getElementById("myBtn2");
+   var btn3 = document.getElementById("myBtn3");
+   var btn4 = document.getElementById("myBtn4");
+   var btn5 = document.getElementById("myBtn5");
+   
+   // Get the <span> element that closes the modal
+   var span = document.getElementsByClassName("close")[0];
+   var span2 = document.getElementsByClassName("close2")[0];
+   var span3 = document.getElementsByClassName("close3")[0];
+   var span4 = document.getElementsByClassName("close4")[0];
+   var span5 = document.getElementsByClassName("close5")[0];
+   
+   // When the user clicks the button, open the modal 
+   btn.onclick = function() {
+     modal.style.display = "block";
+   }
+
+   btn2.onclick = function() {
+     modal2.style.display = "block";
+   }
+
+   btn3.onclick = function() {
+     modal3.style.display = "block";
+   }
+
+   btn4.onclick = function() {
+     modal4.style.display = "block";
+   }
+
+   btn5.onclick = function() {
+     modal5.style.display = "block";
+   }
+   
+   // When the user clicks on <span> (x), close the modal
+
+     span.onclick = function() {
+     modal.style.display = "none";
+   }
+
+   span2.onclick = function() {
+     modal2.style.display = "none";
+   }
+
+   span3.onclick = function() {
+     modal3.style.display = "none";
+   }
+
+   span4.onclick = function() {
+     modal4.style.display = "none";
+   }
+
+   span5.onclick = function() {
+     modal5.style.display = "none";
+   }
+  
+
+
+
+   
+   // When the user clicks anywhere outside of the modal, close it
+
+   window.onclick = function(event) {
+     if (event.target == modal) {
+       modal.style.display = "none";
+     } else if(event.target == modal2){
+       modal2.style.display = "none";
+     } else if(event.target == modal3){
+       modal3.style.display = "none";
+     } else if(event.target == modal4){
+       modal4.style.display = "none";
+     } else if(event.target == modal5){
+       modal5.style.display = "none";
+     }
+   }
+   
+   </script>
+  
+   </body>
+   <BR>
+   <BR>
+
+    <BR>
+
+
+   <b style="margin-left: 750px; color: #aaf255;">All rights reserved.<br>
+    <a style="margin-left: 735px; color:#aaf255"> Powered by</a> <a style="color: #aaf255;" href="https://alexpgdev.github.io/pepe/" target="_blank"> <u>PEPEdev</u></a></br></b></a>
+
+</BODY>
+</HTML>
